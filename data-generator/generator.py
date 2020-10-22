@@ -159,7 +159,7 @@ if __name__=="__main__":
     today = datetime.datetime.today().date()
     for d in reversed(list(range(args.days_newest, args.days_oldest))):
         date = today - datetime.timedelta(days=d)
-        timestamp = date.strftime("%s")
+        timestamp = date.strftime("%d")
         for fossology in fossologies:
             fossology.increase_random_all()
             for metric_name in fossology.metrics:
